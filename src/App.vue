@@ -1,8 +1,6 @@
 <template>
   <div>
-      <p>aaaaaaaaa</p>
       <RouterView/>
-      <p>bbbbbbbbb</p>
   </div>
 </template>
 
