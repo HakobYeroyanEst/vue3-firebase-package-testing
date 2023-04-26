@@ -1,5 +1,5 @@
 <template>
-    <p>Hello There</p>
+    <AuthenticationGuard />
 </template>
 
 <script setup>
