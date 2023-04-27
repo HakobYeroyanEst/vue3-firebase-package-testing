@@ -1,14 +1,7 @@
-import { createApp } from "vue"
 import router from "@/router"
-import AuthGuard from "../../node_modules/@nerd305/firebase-vuetify-auth"
 import firebaseApp from "@/middleware/firebase"
 
-import App from '@/App.vue'
-const app = createApp(App)
-
-app.config.productionTip = false
-
-const authGuardSettings = {
+export const authGuardSettings = {
     debug: true, // enable debug messages in console log
     session: "local", // session persistence
 
@@ -27,6 +20,3 @@ const authGuardSettings = {
     verification: false, // require user email to be verified before granting access
     registration: false, // allow new user registrations
 }
-
-
-app.use(AuthGuard, authGuardSettings)
