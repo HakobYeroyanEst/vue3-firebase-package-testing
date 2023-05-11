@@ -9,15 +9,14 @@ import AuthGuard from "@nerd305/firebase-vuetify-auth"
 import { authGuardSettings } from "./plugins/auth"
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 
-const app = createApp(App)
-const pinia = createPinia()
-
-app.config.productionTip = false
-
 onAuthStateChanged(getAuth(firebase), () => {
-    app.use(AuthGuard, authGuardSettings)
-    app.use(pinia)
+    const app = createApp(App)
+
+    app.config.productionTip = false
+
+    app.use(createPinia())
     app.use(router)
     app.use(vuetify)
+    app.use(AuthGuard, authGuardSettings)
     app.mount('#app')
 })

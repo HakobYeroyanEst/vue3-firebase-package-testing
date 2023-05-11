@@ -9,6 +9,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@mdi/font": "^7.2.96",
     "@nerd305/firebase-vuetify-auth": "^3.0.0",
     "firebase": "^9.19.1",
     "pinia": "^2.0.32",

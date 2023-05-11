@@ -1,12 +1,12 @@
 import router from "@/router"
-import firebaseApp from "@/middleware/firebase"
+import firebase from "@/middleware/firebase"
 
 export const authGuardSettings = {
     debug: true, // enable debug messages in console log
     session: "local", // session persistence
 
     router, // routes
-    firebase: firebaseApp, // pass on firebase middleware app init
+    firebase, // pass on firebase middleware app init
 
     saml: false, // allow authentication with SAML
     saml_text: "Login with OKTA", // text for large login button

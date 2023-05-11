@@ -1,5 +1,7 @@
 <template>
   <div>
+      <AuthenticationGuard />
+
       <RouterView/>
   </div>
 </template>
